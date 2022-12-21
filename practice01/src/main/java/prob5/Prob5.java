@@ -10,7 +10,6 @@ public class Prob5 {
          if(temp>0) {
             System.out.println(i+" "+"짝".repeat(temp));
          }
-      }
-      
+      }      
    }
 }
