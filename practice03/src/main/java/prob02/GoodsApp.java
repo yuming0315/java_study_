@@ -14,12 +14,14 @@ public class GoodsApp {
 		for(int i=0;i<COUNT_GOODS;i++) {
 			String info = scanner.nextLine();
 			String[] infos = info.split(" ");
-			System.out.println(infos[0]+":"+infos[1]+":"+infos[2]);
-			goods[i]=new Goods();
+			goods[i]=new Goods(infos[0],Integer.parseInt(infos[1]),Integer.parseInt(infos[2]));
 		}
-
-		// 상품 출력
+		System.out.println();
 		
+		// 상품 출력
+		for(int i=0;i<COUNT_GOODS;i++) {
+			goods[i].show();
+		}
 		// 자원정리
 		scanner.close();
 	}
