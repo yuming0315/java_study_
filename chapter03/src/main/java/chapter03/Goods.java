@@ -1,13 +1,20 @@
 package chapter03;
 
 public class Goods {
+	public static int countOfGoods=0;
 	private String name;
 	private int price;
 	private int countStock;
 	private int countSold;
 	
+	public Goods() {
+		Goods.countOfGoods=Goods.countOfGoods+1;
+	}
+	public int calcDiscountPrice(float discountRate) {
+		return (int)(price*discountRate);
+	}
 	public void printInfo() {
-		System.out.println(name+":"+price+":"+countStock+":"+countSold);
+		System.out.println(name+":"+price+":"+countStock+":"+countSold+":"+Goods.countOfGoods);
 	}
 	
 	public String getName() {
@@ -20,7 +27,7 @@ public class Goods {
 		return price;
 	}
 	public void setPrice(int price) {
-		this.price = price;
+		this.price = (price>=0) ? price : 0;
 	}
 	public int getCountStock() {
 		return countStock;
