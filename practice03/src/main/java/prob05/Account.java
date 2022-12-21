@@ -20,7 +20,7 @@ public class Account {
 	}
 	
 	public void deposit(int money) {
-		if(money>0) {
+		if(money<balance) {
 			setBalance(balance-money);
 			System.out.printf("%s 계좌에 %d만원이 출금되었습니다.\n",accountNo,money);
 		}
