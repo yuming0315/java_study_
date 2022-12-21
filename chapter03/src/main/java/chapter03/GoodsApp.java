@@ -16,6 +16,9 @@ public class GoodsApp {
 		Goods camera4 = new Goods();
 		
 		camera.printInfo();
+		
+		Goods tv = new Goods("TV",40000,10,20);
+		tv.printInfo();
 	}
 
 }

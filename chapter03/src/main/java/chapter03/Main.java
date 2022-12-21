@@ -7,5 +7,8 @@ public class Main {
 		point.setX(10);
 		point.setY(10);
 		point.show();
+		
+		point.show(true);
+		point.show(false);
 	}
 }

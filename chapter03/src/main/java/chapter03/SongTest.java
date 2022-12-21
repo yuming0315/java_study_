@@ -12,6 +12,9 @@ public class SongTest {
 		song.setYear(2010);
 		
 		song.show();
+		
+		Song song2 = new Song("좋은날","아이유","Real","이민수",3,2022);
+		song2.show();
 	}
 
 }
