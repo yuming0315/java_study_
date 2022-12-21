@@ -15,17 +15,17 @@ public class Account {
 			System.out.printf("%s 계좌에 %d만원이 입금되었습니다.\n",accountNo,money);
 		}
 		else {
-			System.out.println("잘못된 입력값입니다.");
+			System.out.println("잘못된 입력값입니다. 실행취소");
 		}
 	}
 	
 	public void deposit(int money) {
-		if(money<balance) {
+		if(money<=balance) {
 			setBalance(balance-money);
 			System.out.printf("%s 계좌에 %d만원이 출금되었습니다.\n",accountNo,money);
 		}
 		else {
-			System.out.println("잘못된 입력값입니다.");
+			System.out.println("잘못된 입력값입니다. 실행취소");
 		}
 	}
 	
