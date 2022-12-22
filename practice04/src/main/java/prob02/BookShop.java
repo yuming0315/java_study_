@@ -24,6 +24,13 @@ public class BookShop {
 		int num = scanner.nextInt();
 		scanner.close();
 		
+		for(Book b:books) {
+			if(b.getBookNo()==num) {
+				b.setStateCode(0);
+				break;
+			}
+		}
+		
 		//책번호도 출력해주게
 		// (2) Book 객체의 정보를 출력
 		System.out.println("*****도서 정보 출력하기******");
@@ -31,7 +38,7 @@ public class BookShop {
 	}
 	private static void displayBookInfo(Book[] books) {
 		for(Book b:books) {
-			book.print();
+			b.print();
 		}
 	}
 }
