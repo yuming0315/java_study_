@@ -1,6 +1,6 @@
 package chapter03;
 
-public class Point {
+public class Point implements Drawable{
 	private int x;
 	private int y;
 	
@@ -24,6 +24,12 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
+	
+	@Override
+	public void draw() {
+		show();
+	}
+	
 	public void show() {
 		System.out.printf("점 (x=%d, y=%d)을 그렸습니다.\n",x,y);
 	}
@@ -36,4 +42,5 @@ public class Point {
 		}
 		
 	}
+	
 }
