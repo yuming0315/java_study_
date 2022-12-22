@@ -1,7 +1,7 @@
 package prob5;
 
 public class MainApp {
-
+	
 	public static void main(String[] args) {
 		try {
 			MyStack stack = new MyStack(3);
@@ -28,6 +28,5 @@ public class MainApp {
 			System.out.println( ex );
 		}
 
-	}
-
+	}//IndexOutOfBoundsException
 }
