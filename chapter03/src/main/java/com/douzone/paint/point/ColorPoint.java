@@ -1,4 +1,4 @@
-package chapter03;
+package com.douzone.paint.point;
 
 public class ColorPoint extends Point {
 	private String color;

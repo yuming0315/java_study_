@@ -1,4 +1,6 @@
-package chapter03;
+package com.douzone.paint.point;
+
+import com.douzone.paint.i.Drawable;
 
 public class Point implements Drawable{
 	private int x;

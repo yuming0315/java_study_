@@ -1,4 +1,4 @@
-package chapter03;
+package com.douzone.paint.i;
 
 public interface Drawable {
 	void draw();
