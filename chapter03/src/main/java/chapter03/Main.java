@@ -28,7 +28,25 @@ public class Main {
 		draw(rect);
 		draw(tri);
 		draw(circle);
+		draw(new GraphicText("Hello World"));
 		
+		//instanceof 연산자 Test
+		System.out.println(circle instanceof Object);
+		System.out.println(circle instanceof Shape);
+		//아래문장은 컴파일 조차 안시켜줌 instanceof가 가능한 관계는 상속받은 위의가족들
+		//System.out.println(circle instanceof Rect);
+		
+		//오류: 연산자 우측항이 클래스인 경우,
+		//레퍼런스 하고 있는 class 타입의 hierachy 상의 하위와 상위만
+		//instanceof 연산자를 사용할 수 있다.
+		
+		Object o = circle;
+		System.out.println(o instanceof String);
+		
+		//연산자 우측항이 인터페이스인 경우,
+		//Hierachy 상관 없이 instanceof 연산자를 사용할 수 있다.
+		System.out.println(circle instanceof Drawable);
+		System.out.println(circle instanceof Runnable);
 		
 	}
 	public static void draw(Drawable d) {
