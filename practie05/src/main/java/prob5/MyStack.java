@@ -9,21 +9,23 @@ public class MyStack {
 	public MyStack(int i) {
 		stack=new String[i];
 	}
+	public boolean isMax() {
+		return index!=stack.length-1;
+	}
 	public void push(String string) {
-		if(index==stack.length-1) {
+		if(isMax()) {
 			stack = Arrays.copyOf(stack, stack.length + 1);
 		}
 		stack[++index] = string;
 	}
 	public boolean isEmpty() {
-		return (index==-1?true:false);
+		return index==-1?true:false;
 	}
 	public String pop() {
-		if(index==-1) {
-			throw new MyStackException();
-		}
-		return stack[index--];
+		return isEmpty()?error():stack[index--];
 	}
 	
-	
+	public String error() {
+		throw new MyStackException();
+	}
 }
