@@ -20,14 +20,16 @@ public class ArrayUtil {
 
 	public static int[] concat(int[] is, int[] is2) {
 		int[] arr = new int[is.length+is2.length];
-		for(int i=0;i<arr.length;i++) {
-			if(is.length>i) {
-				arr[i]=is[i];
-			}
-			else {
-				arr[i]=is2[i-is.length];
-			}
+		
+		int idx=0;
+		
+		for(int i : is) {
+			arr[idx++]=i;
 		}
+		for(int i : is2) {
+			arr[idx++]=i;
+		}
+		
 		return arr;
 	}
 
